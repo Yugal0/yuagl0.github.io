@@ -16,150 +16,69 @@
             overflow: hidden;
             height: 100vh;
             width: 100vw;
+            background: #ffffff;
         }
 
-        .container {
-            display: flex;
-            height: 100vh;
+        .stripes-container {
             width: 100vw;
-        }
-
-        .color-section {
-            flex: 1;
+            height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: flex 0.5s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            flex-direction: column;
         }
 
-        .color-section:hover {
+        .stripe {
+            flex: 1;
+            width: 100%;
+            transition: flex 0.5s ease;
+        }
+
+        .stripe:hover {
             flex: 1.5;
         }
 
-        .color-info {
-            color: white;
-            text-align: center;
-            z-index: 10;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .stripe-1 {
+            background: linear-gradient(90deg, #FF6B6B 0%, #FF8E8E 50%, #FFA6A6 100%);
         }
 
-        .color-section:hover .color-info {
-            opacity: 1;
+        .stripe-2 {
+            background: linear-gradient(90deg, #F7971E 0%, #FFD200 50%, #FFE566 100%);
         }
 
-        .color-name {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
+        .stripe-3 {
+            background: linear-gradient(90deg, #56AB2F 0%, #A8E063 50%, #C5F084 100%);
         }
 
-        .color-code {
-            font-size: 1.2em;
-            font-family: 'Courier New', monospace;
-            letter-spacing: 1px;
+        .stripe-4 {
+            background: linear-gradient(90deg, #4ECDC4 0%, #44A08D 50%, #6BC7BE 100%);
         }
 
-        /* Individual color sections */
-        .coral {
-            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+        .stripe-5 {
+            background: linear-gradient(90deg, #667EEA 0%, #764BA2 50%, #8B6AC7 100%);
         }
 
-        .ocean {
-            background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+        .stripe-6 {
+            background: linear-gradient(90deg, #A770EF 0%, #CF8BF3 50%, #D9A5F6 100%);
         }
 
-        .sunset {
-            background: linear-gradient(135deg, #F7971E 0%, #FFD200 100%);
+        .stripe-7 {
+            background: linear-gradient(90deg, #FF6B9D 0%, #C06C84 50%, #D98BA6 100%);
         }
 
-        .lavender {
-            background: linear-gradient(135deg, #A770EF 0%, #CF8BF3 100%);
-        }
-
-        .forest {
-            background: linear-gradient(135deg, #56AB2F 0%, #A8E063 100%);
-        }
-
-        .midnight {
-            background: linear-gradient(135deg, #2C3E50 0%, #4CA1AF 100%);
-        }
-
-        /* Decorative elements */
-        .color-section::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            top: -50%;
-            left: -50%;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .color-section:hover::before {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            
-            .color-name {
-                font-size: 1.8em;
-            }
-            
-            .color-code {
-                font-size: 1em;
-            }
+        .stripe-8 {
+            background: linear-gradient(90deg, #F093FB 0%, #F5576C 50%, #F77B8E 100%);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="color-section coral">
-            <div class="color-info">
-                <div class="color-name">CORAL</div>
-                <div class="color-code">#FF6B6B</div>
-            </div>
-        </div>
-        <div class="color-section ocean">
-            <div class="color-info">
-                <div class="color-name">OCEAN</div>
-                <div class="color-code">#4ECDC4</div>
-            </div>
-        </div>
-        <div class="color-section sunset">
-            <div class="color-info">
-                <div class="color-name">SUNSET</div>
-                <div class="color-code">#F7971E</div>
-            </div>
-        </div>
-        <div class="color-section lavender">
-            <div class="color-info">
-                <div class="color-name">LAVENDER</div>
-                <div class="color-code">#A770EF</div>
-            </div>
-        </div>
-        <div class="color-section forest">
-            <div class="color-info">
-                <div class="color-name">FOREST</div>
-                <div class="color-code">#56AB2F</div>
-            </div>
-        </div>
-        <div class="color-section midnight">
-            <div class="color-info">
-                <div class="color-name">MIDNIGHT</div>
-                <div class="color-code">#2C3E50</div>
-            </div>
-        </div>
+    <div class="stripes-container">
+        <div class="stripe stripe-1"></div>
+        <div class="stripe stripe-2"></div>
+        <div class="stripe stripe-3"></div>
+        <div class="stripe stripe-4"></div>
+        <div class="stripe stripe-5"></div>
+        <div class="stripe stripe-6"></div>
+        <div class="stripe stripe-7"></div>
+        <div class="stripe stripe-8"></div>
     </div>
 </body>
 </html>
