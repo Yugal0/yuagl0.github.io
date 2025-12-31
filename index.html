@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Love</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .color-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: flex 0.5s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .color-section:hover {
+            flex: 1.5;
+        }
+
+        .color-info {
+            color: white;
+            text-align: center;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .color-section:hover .color-info {
+            opacity: 1;
+        }
+
+        .color-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .color-code {
+            font-size: 1.2em;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        /* Individual color sections */
+        .coral {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+        }
+
+        .ocean {
+            background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
+        }
+
+        .sunset {
+            background: linear-gradient(135deg, #F7971E 0%, #FFD200 100%);
+        }
+
+        .lavender {
+            background: linear-gradient(135deg, #A770EF 0%, #CF8BF3 100%);
+        }
+
+        .forest {
+            background: linear-gradient(135deg, #56AB2F 0%, #A8E063 100%);
+        }
+
+        .midnight {
+            background: linear-gradient(135deg, #2C3E50 0%, #4CA1AF 100%);
+        }
+
+        /* Decorative elements */
+        .color-section::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            top: -50%;
+            left: -50%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .color-section:hover::before {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .color-name {
+                font-size: 1.8em;
+            }
+            
+            .color-code {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="color-section coral">
+            <div class="color-info">
+                <div class="color-name">CORAL</div>
+                <div class="color-code">#FF6B6B</div>
+            </div>
+        </div>
+        <div class="color-section ocean">
+            <div class="color-info">
+                <div class="color-name">OCEAN</div>
+                <div class="color-code">#4ECDC4</div>
+            </div>
+        </div>
+        <div class="color-section sunset">
+            <div class="color-info">
+                <div class="color-name">SUNSET</div>
+                <div class="color-code">#F7971E</div>
+            </div>
+        </div>
+        <div class="color-section lavender">
+            <div class="color-info">
+                <div class="color-name">LAVENDER</div>
+                <div class="color-code">#A770EF</div>
+            </div>
+        </div>
+        <div class="color-section forest">
+            <div class="color-info">
+                <div class="color-name">FOREST</div>
+                <div class="color-code">#56AB2F</div>
+            </div>
+        </div>
+        <div class="color-section midnight">
+            <div class="color-info">
+                <div class="color-name">MIDNIGHT</div>
+                <div class="color-code">#2C3E50</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
